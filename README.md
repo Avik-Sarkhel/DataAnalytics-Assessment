@@ -8,9 +8,9 @@ This repository contains SQL scripts used for analyzing **user behavior**, **tra
 
 This SQL-based assessment tested my ability to work with a **complex, multi-table schema** involving financial products. The focus was on:
 
-- Cleaning dirty or invalid data
-- Segmenting users by behavioral traits
-- Identifying inactive plans
+- Cleaning dirty or invalid data  
+- Segmenting users by behavioral traits  
+- Identifying inactive plans  
 - Calculating Customer Lifetime Value (CLV)
 
 ---
@@ -94,5 +94,60 @@ Before writing any analytical queries, I cleaned each table **separately** using
 ### Q2: Frequency Segmentation
 - Grouped transactions by user  
 - Calculated average monthly savings  
-- Classified users into
+- Classified users into: **High**, **Medium**, and **Low Frequency**
 
+### Q3: Inactive Plans
+- Identified active/inactive savings plans  
+- Plans with **no transaction in last 12+ months** were flagged
+
+### Q4: Customer Lifetime Value (CLV)
+- Calculated user tenure in months  
+- Estimated avg monthly contribution  
+- Used:  
+  `CLV = (Monthly Transactions × 12) × Avg Profit Per Transaction`
+
+---
+
+## 🚧 Challenges & How I Tackled Them
+
+| Challenge                         | How I Solved It                                        |
+|----------------------------------|--------------------------------------------------------|
+| Large schema + too many columns | Broke it into chunks, noted down structure manually   |
+| Dirty/messy savings table        | Less aggressive filtering to avoid data loss          |
+| Soft filtering via `is_deleted` | Helped me track what’s invalid without removing rows  |
+| Financial domain unfamiliarity   | Used Google + ChatGPT + logic + common sense          |
+
+---
+
+## 🛠️ Tech Stack
+
+- **SQL** – MySQL-compatible syntax  
+- **Pen & Paper** – For breaking down schema  
+- **GitHub** – Version control and documentation
+
+---
+
+## 👨‍💻 Author
+
+**Avik Sarkhel**  
+🎓 MCA Student | Aspiring Data Analyst  
+📍 Based in Kolkata, India  
+📫 [avik305sarkhel@gmail.com](mailto:avik305sarkhel@gmail.com)  
+🔗 [LinkedIn – Avik Sarkhel](https://www.linkedin.com/in/avik-sarkhel)
+
+---
+
+## ✨ Final Words
+
+This assessment wasn’t just a test — it was a **level-up moment**.  
+I learned:
+
+- How much **cleaning** affects analysis  
+- How to approach **complex schemas**  
+- That SQL isn’t just about SELECTs, it’s about **logic** and **business thinking**
+
+> 💡 It’s okay to feel lost at first. Start small. Think clearly. The answers are always in the data.
+
+---
+
+> ⭐ If this project helped you or inspired your own SQL learning journey, drop a ⭐ and connect!
